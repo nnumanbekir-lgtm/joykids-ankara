@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>JoyKids · Anne & Çocuk Oyun Cafe · Etimesgut</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="JoyKids Ankara, Etimesgut. 12–66 ay arası çocuklar için yaşa göre oyun grupları, 90 dakikalık seanslar ve anneler için cafe.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;700;800;900&display=swap">
+<style>
+/* Play cafe: logo orange + cloud blue on warm cream. Signature: "Kaç aylık?" slider that lights the matching sessions in the week's program; a 90-minute session dial (30 dk serbest oyun + 60 dk etkinlik) */
+:root{--bg:#fff8ef;--paper:#fff;--ink:#22304a;--muted:#5d6577;--or:#f3922b;--or-d:#d4731a;--or-soft:#fde8cf;--bl:#2f6fd0;--bl-d:#22549f;--bl-soft:#dce9fb;--pk:#e9568c;--pk-soft:#fbe0ea;--gr:#4fae6a;--gr-soft:#dff2e4;--yl:#f6c544;--line:#efe3d1;
+--disp:'Fredoka',system-ui,sans-serif;--body:'Nunito',system-ui,sans-serif;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(18px,env(safe-area-inset-left,0px));padding-right:max(18px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--disp);font-weight:700;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0}a{color:inherit}
+:focus-visible{outline:3px solid var(--or);outline-offset:3px}
+.num{font-variant-numeric:tabular-nums}
+.ph{background:#ffe15a;color:var(--ink);border-radius:6px;padding:0 6px}
+[hidden]{display:none!important}
+.preview{background:var(--ink);color:#eef2fa;font-size:13px}
+.preview .wrap{display:flex;justify-content:space-between;gap:6px 16px;flex-wrap:wrap;padding-block:8px}
+.preview b{color:var(--or)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;gap:14px;padding-block:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0}
+.logo svg{width:54px;height:54px;flex:none}
+.logo b{font-family:var(--disp);font-size:1.7rem;line-height:.9;color:var(--bl);display:block}
+.logo b i{font-style:normal;color:var(--or)}
+.logo small{font-size:10.5px;font-weight:800;color:var(--muted);letter-spacing:.22em}
+.nl{display:flex;gap:22px;font-weight:800;font-size:15px;align-items:center}
+.nl a:not(.btn){text-decoration:none;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;background:var(--or);color:#fff;text-decoration:none;font:inherit;font-weight:800;font-size:16px;padding:13px 22px;border-radius:999px;border:0;cursor:pointer;box-shadow:0 4px 0 var(--or-d)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--or-d)}
+.btn.b{background:var(--bl);box-shadow:0 4px 0 var(--bl-d)}
+.btn.lt{background:var(--paper);color:var(--ink);box-shadow:inset 0 0 0 2px var(--line)}
+.hero{padding-block:14px 64px}
+.hg{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.hg>*{min-width:0}
+.chip{display:inline-flex;gap:8px;align-items:center;background:var(--bl-soft);color:var(--bl-d);border-radius:999px;padding:6px 14px;font-weight:800;font-size:14px}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4rem);margin-top:16px}
+.hero h1 em{font-style:normal;color:var(--or)}
+.hero .s{font-size:1.15rem;color:var(--muted);margin-top:16px;max-width:48ch}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.facts{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.facts span{font-weight:800;font-size:14px;padding:6px 14px;border-radius:12px;background:var(--b);color:var(--c)}
+.art svg{width:100%;height:auto;display:block}
+.bob{animation:bob 5s ease-in-out infinite;transform-box:fill-box;transform-origin:center}
+@keyframes bob{50%{transform:translateY(-8px)}}
+section{padding-block:clamp(56px,8vw,96px)}
+.head{display:grid;gap:10px;margin-bottom:30px;max-width:64ch}
+.head h2{font-size:clamp(2rem,4.6vw,3rem)}
+.head h2 em{font-style:normal;color:var(--or)}
+.head p{color:var(--muted);font-size:1.05rem}
+.eb{font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--pk)}
+/* age matcher */
+.wk{background:var(--paper);border-block:1px solid var(--line)}
+.ag{display:grid;grid-template-columns:300px 1fr;gap:28px;align-items:start}
+.ag>*{min-width:0}
+.dial{background:var(--bl-soft);border-radius:28px;padding:24px;display:grid;gap:12px;justify-items:center;text-align:center;position:sticky;top:16px}
+.dial .m{font-family:var(--disp);font-size:4.2rem;line-height:1;color:var(--bl-d)}
+.dial .m small{font-size:1.2rem;color:var(--muted);font-family:var(--body);font-weight:800}
+.dial .y{font-weight:800;color:var(--muted);font-size:15px}
+.dial input[type=range]{width:100%;accent-color:var(--or)}
+.dial .r{font-weight:800;font-size:15px;color:var(--ink);background:var(--paper);border-radius:14px;padding:10px 12px;width:100%}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}
+.day{background:var(--bg);border:2px solid var(--line);border-radius:20px;padding:12px 10px;display:grid;gap:8px;align-content:start;min-height:170px}
+.day h3{font-size:1.05rem;text-align:center}
+.day.off{opacity:.55}
+.day.off p{font-size:13px;text-align:center;color:var(--muted)}
+.ss{border-radius:14px;padding:8px;background:var(--paper);border:2px dashed var(--line);display:grid;gap:2px;text-align:center;transition:background .3s,border-color .3s,transform .3s,opacity .3s;opacity:.5}
+.ss b{font-family:var(--disp);font-size:1.15rem}
+.ss span{font-size:12.5px;font-weight:800;color:var(--muted)}
+.ss.fit{opacity:1;border-style:solid;border-color:var(--or);background:var(--or-soft);transform:scale(1.03)}
+.note{font-size:13.5px;color:var(--muted);margin-top:16px}
+/* session */
+.se{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.se>*{min-width:0}
+.clock svg{width:100%;max-width:380px;display:block;margin-inline:auto}
+.scrub{width:100%;max-width:380px;display:block;margin:14px auto 0;accent-color:var(--bl)}
+.now{background:var(--paper);border:2px solid var(--line);border-radius:22px;padding:18px 20px;margin-top:18px;display:grid;gap:6px}
+.now b{font-family:var(--disp);font-size:1.3rem;color:var(--bl-d)}
+.now p{color:var(--muted);font-size:15.5px}
+.legend{display:grid;gap:12px;margin-top:20px}
+.legend div{display:flex;gap:12px;align-items:flex-start}
+.legend i{width:18px;height:18px;border-radius:6px;background:var(--c);flex:none;margin-top:4px}
+.legend p{color:var(--muted);font-size:15.5px}
+.legend b{color:var(--ink)}
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.cd{border-radius:24px;padding:22px;background:var(--b);display:grid;gap:8px;align-content:start}
+.cd .ic{width:54px;height:54px;border-radius:50%;background:var(--paper);display:grid;place-items:center;font-size:26px}
+.cd h3{font-size:1.3rem}
+.cd p{color:var(--muted);font-size:15px}
+/* packages */
+.pk{background:var(--bl-d);color:#eef4ff}
+.pk .head p{color:#cddcf6}.pk .eb{color:var(--yl)}
+.pk .head h2 em{color:var(--yl)}
+.pg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.pc{background:var(--paper);color:var(--ink);border-radius:26px;padding:24px;display:grid;gap:10px;align-content:start;position:relative}
+.pc.top{box-shadow:0 0 0 4px var(--yl)}
+.pc .tag{position:absolute;top:-13px;right:18px;background:var(--yl);color:var(--ink);font-weight:800;font-size:13px;border-radius:999px;padding:3px 12px}
+.pc h3{font-size:1.35rem}
+.pc .pr{font-family:var(--disp);font-size:2.4rem;line-height:1;color:var(--bl-d)}
+.pc .pr s{font-size:1.1rem;color:var(--muted);font-family:var(--body);font-weight:700;margin-left:6px}
+.pc .pr small{font-size:1rem;color:var(--muted);font-family:var(--body);font-weight:800}
+.pc ul{margin:0;padding-left:18px;color:var(--muted);font-size:15px}
+.pc .per{font-weight:800;color:var(--gr);font-size:14.5px}
+.pk .note{color:#cddcf6}
+.why{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.wy{background:var(--paper);border:2px solid var(--line);border-radius:26px;padding:24px;display:grid;gap:10px}
+.wy .big{font-size:36px;line-height:1}
+.wy h3{font-size:1.3rem}
+.wy p{color:var(--muted);font-size:15px}
+.faq{max-width:840px}
+.faq details{background:var(--paper);border:2px solid var(--line);border-radius:18px;padding:16px 20px;margin-bottom:10px}
+.faq summary{font-weight:800;font-size:1.1rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:after{content:"+";color:var(--or);font-size:1.5rem;line-height:1}
+.faq details[open] summary:after{content:"–"}
+.faq p{color:var(--muted);margin-top:8px}
+.contact{background:var(--or-soft)}
+.cg{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:start}
+.cg>*{min-width:0}
+.contact h2{font-size:clamp(2rem,4.6vw,3rem)}
+.contact h2 em{font-style:normal;color:var(--or-d)}
+.contact .s{color:var(--muted);margin-top:14px;max-width:44ch}
+.info{margin-top:24px;display:grid;border-top:2px solid var(--line)}
+.info div{display:grid;grid-template-columns:110px 1fr;gap:12px;padding-block:14px;border-bottom:2px solid var(--line)}
+.info span{font-size:12.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.info b{font-weight:700;word-break:break-word}
+.info a{color:var(--bl-d)}
+form{background:var(--paper);border-radius:26px;padding:24px;display:grid;gap:12px;box-shadow:0 10px 30px rgba(212,115,26,.12)}
+form h3{font-size:1.6rem;color:var(--bl-d)}
+.f{display:grid;gap:5px}.f label{font-size:14px;font-weight:800;color:var(--muted)}
+select,input:not([type=checkbox]),textarea{font:inherit;font-size:16px;padding:12px 14px;border:2px solid var(--line);border-radius:14px;background:var(--paper);color:var(--ink);width:100%;min-width:0}
+select:focus,input:not([type=checkbox]):focus,textarea:focus{border-color:var(--bl);outline:none}
+.r2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.kv{display:flex;gap:10px;font-size:14px;color:var(--muted);align-items:flex-start}
+.kv input{width:18px;height:18px;margin-top:3px;accent-color:var(--bl);flex:none}
+.ok{background:var(--bl-soft);color:var(--bl-d);border-radius:14px;padding:12px 14px;font-weight:700}
+.ok .btn{margin-top:8px}
+.er{color:#b23a2c;font-weight:700;font-size:14px}
+footer{background:var(--ink);color:#c5cde0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-block:22px}
+@media (max-width:980px){
+ .days{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media (max-width:900px){
+ .hg,.se,.cg,.ag{grid-template-columns:1fr}
+ .dial{position:static}
+ .cards,.why,.pg{grid-template-columns:1fr 1fr}
+ .nl a:not(.btn){display:none}
+ .art{max-width:440px;margin-inline:auto}
+}
+@media (max-width:560px){
+ .r2,.cards,.why,.pg{grid-template-columns:1fr}
+ .days{grid-template-columns:1fr 1fr}
+ .day{min-height:0}
+ .info div{grid-template-columns:1fr;gap:2px}.logo small{display:none}.nl .btn{padding:10px 14px;font-size:14px}
+}
+</style></head><body>
+
+<div class="preview"><div class="wrap"><span><b>Önizleme.</b> Bu sayfa JoyKids Ankara için hazırlanmış taslak bir tasarımdır.</span><span>Sarı işaretli bilgiler sizin onayınızla güncellenecektir.</span></div></div>
+
+<nav><div class="wrap">
+<a class="logo" href="#"><svg viewBox="0 0 54 54" aria-hidden="true"><circle cx="27" cy="27" r="26" fill="#f3922b"/><circle cx="27" cy="27" r="21" fill="#fff8ef"/><path d="M11 33a7 7 0 0 1 6-9 9 9 0 0 1 17-2 6 6 0 0 1 9 6 5 5 0 0 1-2 10H15a5 5 0 0 1-4-5z" fill="#2f6fd0"/><circle cx="20" cy="15" r="3.4" fill="#f6c544"/><circle cx="27" cy="12" r="3.4" fill="#e9568c"/><circle cx="34" cy="15" r="3.4" fill="#4fae6a"/></svg>
+<span><b>Joy<i>Kids</i></b><small>OYUN · ETKİNLİK · CAFE</small></span></a>
+<div class="nl"><a href="#program">Program</a><a href="#seans">Seans</a><a href="#paket">Paketler</a><a class="btn" href="#iletisim">Randevu</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap hg">
+<div>
+<span class="chip">🧸 12–66 ay · Etimesgut</span>
+<h1>Minikler akranlarıyla <em>oynasın,</em> siz kahvenizi için.</h1>
+<p class="s">JoyKids, aynı yaştaki çocukları bir araya getiren bir anne &amp; çocuk oyun cafe’si. Okul öncesi öğretmenimizin hazırladığı oyunlarla çocuklar sosyalleşiyor, paylaşmayı öğreniyor ve kreş ortamına hazırlanıyor.</p>
+<div class="cta"><a class="btn" href="#iletisim">Deneme seansı ayarlayın</a><a class="btn lt" href="#program">Bu haftanın programı</a></div>
+<div class="facts"><span style="--b:var(--or-soft);--c:#9c5310">👶 6–8 kişilik gruplar</span><span style="--b:var(--bl-soft);--c:var(--bl-d)">⏱️ 90 dakikalık seans</span><span style="--b:var(--gr-soft);--c:#2f7a45">☕ Anneler için cafe</span><span style="--b:var(--pk-soft);--c:#b33463">🎂 Doğum günü</span></div>
+</div>
+<div class="art" aria-hidden="true"><svg viewBox="0 0 440 400">
+<rect x="20" y="30" width="400" height="340" rx="48" fill="#dce9fb"/>
+<g class="bob"><path d="M70 150a40 40 0 0 1 34-50 52 52 0 0 1 98-12 34 34 0 0 1 52 34 30 30 0 0 1-12 58H96a30 30 0 0 1-26-30z" fill="#fff"/></g>
+<g class="bob" style="animation-delay:-2.5s"><path d="M280 110a24 24 0 0 1 20-30 30 30 0 0 1 56-6 20 20 0 0 1 30 20 18 18 0 0 1-8 34h-82a18 18 0 0 1-16-18z" fill="#fff"/></g>
+<rect x="20" y="290" width="400" height="80" rx="0" fill="#f3922b" opacity=".18"/>
+<path d="M20 300h400v22a48 48 0 0 1-48 48H68a48 48 0 0 1-48-48z" fill="#fde8cf"/>
+<g transform="translate(120 250)"><rect x="-34" y="0" width="68" height="40" rx="8" fill="#4fae6a"/><text x="0" y="29" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="26" font-weight="700" fill="#fff">J</text></g>
+<g transform="translate(176 262)"><rect x="-24" y="0" width="48" height="28" rx="7" fill="#f6c544"/></g>
+<g transform="translate(150 222)"><rect x="-24" y="0" width="48" height="28" rx="7" fill="#e9568c"/></g>
+<g transform="translate(290 220)"><circle r="20" fill="#f3c9a8"/><path d="M-20 22h40l6 58h-52z" fill="#2f6fd0"/><circle cx="-7" cy="-2" r="2.4" fill="#22304a"/><circle cx="7" cy="-2" r="2.4" fill="#22304a"/><path d="M-6 8q6 5 12 0" stroke="#22304a" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M-20-8q20-26 40 0" fill="#8a5a3b"/></g>
+<g transform="translate(350 236)"><circle r="16" fill="#e0b08d"/><path d="M-16 18h32l5 46h-42z" fill="#f3922b"/><circle cx="-5" cy="-2" r="2" fill="#22304a"/><circle cx="5" cy="-2" r="2" fill="#22304a"/><path d="M-5 6q5 4 10 0" stroke="#22304a" stroke-width="2" fill="none" stroke-linecap="round"/></g>
+<g transform="translate(330 120)"><rect x="-18" y="0" width="36" height="34" rx="6" fill="#fff"/><path d="M18 8h8a7 7 0 0 1 0 14h-8" stroke="#fff" stroke-width="5" fill="none"/><path d="M-6-8q4-8 0-14M6-8q4-8 0-14" stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+</svg></div>
+</div></header>
+
+<section class="wk" id="program"><div class="wrap">
+<div class="head"><p class="eb">Yaşa göre oyun grupları</p><h2>Çocuğunuz <em>kaç aylık?</em></h2><p>Gruplarımız yaşa göre ayrılır, böylece her çocuk kendi akranlarıyla oynar. Kaydırıcıyla çocuğunuzun yaşını seçin; bu haftanın programında ona uygun seanslar öne çıksın.</p></div>
+<div class="ag">
+<div class="dial">
+<div class="m num" id="am">24<small> ay</small></div>
+<p class="y" id="ay">2 yaş</p>
+<input type="range" id="ar" min="12" max="66" value="24" aria-label="Çocuğun yaşı (ay)">
+<p class="r" id="ac" aria-live="polite"></p>
+</div>
+<div class="days" id="days"></div>
+</div>
+<p class="note">Örnek hafta: 23–29 Kasım programından derlendi. <span class="ph">Program her hafta Instagram’daki güncel tabloyla yenilenecek</span></p>
+</div></section>
+
+<section id="seans"><div class="wrap se">
+<div>
+<p class="eb">Bir seans nasıl geçiyor?</p>
+<h2 style="font-size:clamp(2rem,4.6vw,3rem)">90 dakika, <span style="color:var(--or)">iki bölüm</span></h2>
+<p style="color:var(--muted);margin-top:14px">İlk yarım saat minik buraya alışsın ve oyuncakları keşfetsin diye serbest oyun zamanı. Kalan bir saat öğretmenimizin yaşa göre hazırladığı etkinlik ve dansla geçer.</p>
+<div class="legend">
+<div><i style="--c:var(--gr)"></i><p><b>0–30. dakika · Serbest oyun.</b> Minik isterse sizsiz girer; siz cafe bölümünde çayınızı, kahvenizi içersiniz.</p></div>
+<div><i style="--c:var(--or)"></i><p><b>30–90. dakika · Etkinlik ve dans.</b> Gelişim odaklı, her gün değişen oyunlar.</p></div>
+</div>
+</div>
+<div class="clock">
+<svg viewBox="0 0 300 300" role="img" aria-label="90 dakikalık seans saati">
+<circle cx="150" cy="150" r="132" fill="#fff" stroke="#efe3d1" stroke-width="4"/>
+<path id="arcA" fill="none" stroke="#4fae6a" stroke-width="26" stroke-linecap="butt"/>
+<path id="arcB" fill="none" stroke="#f3922b" stroke-width="26" stroke-linecap="butt"/>
+<g id="ticks"></g>
+<line id="hand" x1="150" y1="150" x2="150" y2="44" stroke="#22304a" stroke-width="6" stroke-linecap="round"/>
+<circle cx="150" cy="150" r="10" fill="#22304a"/>
+<text id="ct" x="150" y="200" text-anchor="middle" font-family="Fredoka,sans-serif" font-size="30" font-weight="700" fill="#22304a">0. dk</text>
+</svg>
+<input type="range" class="scrub" id="sc" min="0" max="90" value="10" aria-label="Seansın dakikası">
+<div class="now" aria-live="polite"><b id="nt1"></b><p id="nt2"></p></div>
+</div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="head"><p class="eb">JoyKids’te</p><h2>Oyunla <em>büyüyen</em> çocuklar</h2></div>
+<div class="cards">
+<div class="cd" style="--b:var(--bl-soft)"><span class="ic" aria-hidden="true">🤝</span><h3>Akran arkadaşlığı</h3><p>Aynı yaş grupları bir araya gelir; çocuklar sosyal ve paylaşımcı olmayı oynayarak öğrenir.</p></div>
+<div class="cd" style="--b:var(--or-soft)"><span class="ic" aria-hidden="true">🎒</span><h3>Kreşe hazırlık</h3><p>Grup içinde kurallar, sıra beklemek ve öğretmeni dinlemek; kreş ortamına yumuşak bir geçiş.</p></div>
+<div class="cd" style="--b:var(--pk-soft)"><span class="ic" aria-hidden="true">👩‍👧</span><h3>Akran anneleri</h3><p>Siz de aynı dönemden geçen annelerle tanışır, sohbet edersiniz.</p></div>
+<div class="cd" style="--b:var(--gr-soft)"><span class="ic" aria-hidden="true">🎨</span><h3>Duyusal etkinlikler</h3><p>Boyama, duyu kutuları, müzik ve dans; her gün değişen etkinlikler.</p></div>
+<div class="cd" style="--b:var(--bl-soft)"><span class="ic" aria-hidden="true">🎂</span><h3>Doğum günleri</h3><p>Minik misafirler için oyun alanında doğum günü kutlaması. <span class="ph">Paket detayları eklenecek</span></p></div>
+<div class="cd" style="--b:var(--or-soft)"><span class="ic" aria-hidden="true">🎁</span><h3>Etkinlik ve çekilişler</h3><p>Özel gün etkinlikleri ve takipçilerimize sürprizler; duyurular Instagram’da.</p></div>
+</div></div></section>
+
+<section class="pk" id="paket"><div class="wrap">
+<div class="head"><p class="eb">Ücretler</p><h2>Tek seans ya da <em>aylık abonelik</em></h2><p>Bir kez gelip deneyebilir, beğenirseniz aylık pakete geçebilirsiniz. Aboneliklerde haftalık seans sayısını siz seçersiniz.</p></div>
+<div class="pg">
+<div class="pc"><h3>Tek seans</h3><p class="pr num"><span class="ph">750</span> <small>TL</small></p><ul><li>90 dakika</li><li>Yaşa uygun grup</li><li>1–2 gün önceden randevu</li></ul></div>
+<div class="pc top"><span class="tag">En çok tercih edilen</span><h3>Haftada 1 gün</h3><p class="pr num">2.800 <small>TL</small><s>3.000</s></p><ul><li>Ayda toplam 4 seans</li><li>Her hafta aynı grup ve arkadaşlar</li></ul><p class="per num">Seans başı 700 TL</p></div>
+<div class="pc"><h3>Haftada 2 gün</h3><p class="pr num">5.600 <small>TL</small><s>6.000</s></p><ul><li>Ayda toplam 8 seans</li><li>Kreşe hazırlık için ideal tempo</li></ul><p class="per num">Seans başı 700 TL</p></div>
+</div>
+<p class="note">Aylık paketlerdeki indirimler nakit ödemede geçerlidir. <span class="ph">Güncel fiyatlarla onaylanacak</span></p>
+</div></section>
+
+<section><div class="wrap">
+<div class="head"><p class="eb">Neden JoyKids?</p><h2>Velilerin en çok söylediği üç şey</h2></div>
+<div class="why">
+<div class="wy"><span class="big" aria-hidden="true">💛</span><h3>Sevgi dolu öğretmen</h3><p>Çocuklarla birebir ilgilenen, son dakikaya kadar oyunda tutan, sıcak ve disiplinli bir öğretmen.</p></div>
+<div class="wy"><span class="big" aria-hidden="true">🌱</span><h3>Kolay uyum</h3><p>İlk gelişte bile uyum süreci rahat geçiyor; içine kapanık çocuklar bile kısa sürede açılıyor.</p></div>
+<div class="wy"><span class="big" aria-hidden="true">☕</span><h3>Gözünüzün önünde</h3><p>Cafe bölümünde oturup çayınızı içerken çocuğunuzu izleyebiliyorsunuz.</p></div>
+</div></div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="head"><p class="eb">Sık sorulanlar</p><h2>Veliler soruyor</h2></div>
+<div class="faq">
+<details open><summary>Randevu nasıl alınıyor?</summary><p>1–2 gün önceden size uygun yaş grubunu ve saati seçmeniz yeterli. Grup 3 kişi olunca açılıyor; seanstan bir gün önce sayıyı teyit etmek için sizinle iletişime geçiyoruz.</p></details>
+<details><summary>Seansta ben de çocuğumla kalabilir miyim?</summary><p>Elbette. Bir çocukla en fazla 2 ebeveyn alabiliyoruz. İlk 30 dakikada minik sizsiz girmek isterse siz cafe bölümünde oturabilirsiniz.</p></details>
+<details><summary>Gruplar kaç kişilik?</summary><p>Gruplarımız 6–8 kişilik; böylece öğretmenimiz her çocukla ilgilenebiliyor.</p></details>
+<details><summary>Hangi günler açıksınız?</summary><p>Salı–Cumartesi 10.00–18.30, Pazar 11.00–20.00. Pazartesi kapalıyız.</p></details>
+<details><summary>Doğum günü kutlaması yapıyor musunuz?</summary><p>Evet, oyun alanımızda doğum günü düzenliyoruz. <span class="ph">Kişi sayısı, süre ve paket bilgisi eklenecek</span></p></details>
+</div></div></section>
+
+<section class="contact" id="iletisim"><div class="wrap cg">
+<div><p class="eb">Randevu ve bilgi</p><h2>İlk seansa <em>birlikte gelin</em></h2><p class="s">Formu doldurun, çocuğunuzun yaşına uygun grubu ve saati birlikte belirleyelim.</p>
+<div class="info">
+<div><span>Adres</span><b>Ahi Mesut Mah. Kürşat Cad. 1880. Sok. Tusun İş Merkezi, Zemin Kat 3/B, Etimesgut / Ankara · <a href="https://www.google.com/maps/search/?api=1&amp;query=Joykids%20Anne%20%C3%87ocuk%20Etkinlik%20Merkezi&amp;query_place_id=ChIJt7BMNtE50xQRUP8oUg9OqC4" target="_blank" rel="noopener">Haritada aç</a></b></div>
+<div><span>Telefon</span><b class="num"><a href="tel:+905054405437">0505 440 54 37</a></b></div>
+<div><span>Saatler</span><b>Salı–Cumartesi 10.00–18.30 · Pazar 11.00–20.00 · Pazartesi kapalı</b></div>
+<div><span>Instagram</span><b><a href="https://www.instagram.com/joykidsankara/" target="_blank" rel="noopener">@joykidsankara</a></b></div>
+</div></div>
+<form id="f" novalidate>
+<h3>Randevu talebi</h3>
+<div class="r2"><div class="f"><label for="pn2">Veli adı soyadı</label><input id="pn2" autocomplete="name" placeholder="Adınız soyadınız"></div><div class="f"><label for="pt">Telefon</label><input id="pt" type="tel" autocomplete="tel" placeholder="05xx xxx xx xx"></div></div>
+<div class="r2"><div class="f"><label for="cn">Çocuğun adı</label><input id="cn" placeholder="Çocuğunuzun adı"></div><div class="f"><label for="ca">Yaşı (ay)</label><input id="ca" type="number" min="12" max="66" inputmode="numeric" placeholder="Örn. 24"></div></div>
+<div class="r2"><div class="f"><label for="cg">Konu</label><select id="cg"><option>Deneme seansı</option><option>Aylık abonelik (haftada 1)</option><option>Aylık abonelik (haftada 2)</option><option>Doğum günü</option><option>Bilgi almak istiyorum</option></select></div>
+<div class="f"><label for="cd">Tercih ettiğiniz gün</label><select id="cd"><option>Fark etmez</option><option>Salı</option><option>Çarşamba</option><option>Perşembe</option><option>Cuma</option><option>Cumartesi</option><option>Pazar</option></select></div></div>
+<div class="f"><label for="nt">Notunuz</label><textarea id="nt" rows="2" placeholder="Merak ettikleriniz"></textarea></div>
+<label class="kv" for="kv"><input type="checkbox" id="kv"><span>Kişisel verilerimin randevu amacıyla işlenmesine ilişkin aydınlatma metnini okudum.</span></label>
+<p class="er" id="er" hidden></p>
+<button class="btn" type="submit">Gönder</button>
+<p class="ok" id="ok" hidden></p>
+</form>
+</div></section>
+<footer><div class="wrap"><span>© 2026 JoyKids · Anne &amp; Çocuk Oyun Cafe · Etimesgut / Ankara</span><span>KVKK aydınlatma metni</span></div></footer>
+
+<script>
+(function(){
+// Yayına alırken WhatsApp numarasını yazın (ör. '905054405437'). Boşken form önizleme modunda çalışır.
+var WHATSAPP='';
+function $(i){return document.getElementById(i)}
+
+// weekly program (sample week)
+var W=[['Pazartesi',null],['Salı',[['11.00',23,36]]],['Çarşamba',[]],['Perşembe',[['14.00',30,60]]],['Cuma',[]],['Cumartesi',[['11.00',12,24],['13.30',36,66],['16.00',23,35]]],['Pazar',[['11.00',18,30],['13.30',12,24],['16.00',24,48]]]];
+var days=$('days'),slots=[];
+W.forEach(function(d){var el=document.createElement('div');el.className='day'+(d[1]===null?' off':'');var h=document.createElement('h3');h.textContent=d[0];el.appendChild(h);
+ if(d[1]===null){var p=document.createElement('p');p.textContent='Kapalıyız';el.appendChild(p)}
+ else if(!d[1].length){var p2=document.createElement('p');p2.className='ph';p2.style.fontSize='13px';p2.style.textAlign='center';p2.textContent='Seanslar eklenecek';el.appendChild(p2)}
+ else d[1].forEach(function(s){var b=document.createElement('div');b.className='ss';b.innerHTML='<b class="num"></b><span class="num"></span>';b.querySelector('b').textContent=s[0];b.querySelector('span').textContent=s[1]+'–'+s[2]+' ay';el.appendChild(b);slots.push({el:b,lo:s[1],hi:s[2],d:d[0],t:s[0]})});
+ days.appendChild(el)});
+function age(){var m=+$('ar').value;$('am').firstChild.nodeValue=m;var y=Math.floor(m/12),r=m%12;$('ay').textContent=y+' yaş'+(r?' '+r+' ay':'');
+ var fit=slots.filter(function(s){var ok=m>=s.lo&&m<=s.hi;s.el.classList.toggle('fit',ok);return ok});
+ $('ac').textContent=fit.length?'Bu hafta '+fit.length+' uygun seans: '+fit.map(function(s){return s.d+' '+s.t}).join(', '):'Bu hafta bu yaşa uygun seans yok; yeni grup için bize yazın.'}
+$('ar').addEventListener('input',age);age();
+
+// session dial
+var CX=150,CY=150,R=110;
+function pt(min){var a=(min/90)*2*Math.PI-Math.PI/2;return [CX+R*Math.cos(a),CY+R*Math.sin(a)]}
+function arc(a,b){var p=pt(a),q=pt(b),large=(b-a)>45?1:0;return 'M'+p[0]+' '+p[1]+' A'+R+' '+R+' 0 '+large+' 1 '+q[0]+' '+q[1]}
+$('arcA').setAttribute('d',arc(0,30));$('arcB').setAttribute('d',arc(30,89.99));
+var tk=$('ticks');[0,15,30,45,60,75].forEach(function(m){var a=(m/90)*2*Math.PI-Math.PI/2,t=document.createElementNS('http://www.w3.org/2000/svg','text');t.setAttribute('x',CX+80*Math.cos(a));t.setAttribute('y',CY+80*Math.sin(a)+5);t.setAttribute('text-anchor','middle');t.setAttribute('font-size','14');t.setAttribute('font-weight','800');t.setAttribute('fill','#5d6577');t.setAttribute('font-family','Nunito,sans-serif');t.textContent=m;tk.appendChild(t)});
+var PH=[[0,10,'Hoş geldin!','Minik ortamı tanıyor, oyuncaklara göz atıyor. Siz yanında ya da cafe bölümündesiniz.'],[10,30,'Serbest oyun','Oyuncakları keşfediyor, arkadaşlarıyla ilk temas. Siz çayınızı, kahvenizi için.'],[30,55,'Etkinlik zamanı','Öğretmenimizin yaşa göre hazırladığı gelişim odaklı etkinlik: duyu kutusu, boyama ya da yapım.'],[55,75,'Müzik ve dans','Hep birlikte şarkılar, ritim ve dans; sıra beklemek ve birlikte hareket etmek.'],[75,91,'Toparlanma ve veda','Oyuncakları birlikte topluyor, arkadaşlarına “görüşürüz” diyor.']];
+function sess(){var m=+$('sc').value,p=pt(m===90?89.9:m);$('hand').setAttribute('x2',CX+(p[0]-CX)*.96);$('hand').setAttribute('y2',CY+(p[1]-CY)*.96);$('ct').textContent=m+'. dk';
+ var ph=PH.filter(function(x){return m>=x[0]&&m<x[1]})[0];$('nt1').textContent=ph[2];$('nt2').textContent=ph[3]}
+$('sc').addEventListener('input',sess);sess();
+
+// form
+$('f').addEventListener('submit',function(e){e.preventDefault();var er=$('er'),ok=$('ok');er.hidden=true;ok.hidden=true;
+ var pn=$('pn2').value.trim(),pt2=$('pt').value.trim();
+ if(!pn||pt2.replace(/\D/g,'').length<10){er.textContent='Lütfen adınızı ve geçerli bir telefon numarası yazın.';er.hidden=false;(pn?$('pt'):$('pn2')).focus();return}
+ if(!$('kv').checked){er.textContent='Devam etmek için aydınlatma metnini onaylayın.';er.hidden=false;$('kv').focus();return}
+ var txt='Merhaba, JoyKids için randevu almak istiyorum.\nVeli: '+pn+'\nTelefon: '+pt2+'\nÇocuk: '+($('cn').value.trim()||'-')+' ('+($('ca').value?$('ca').value+' aylık':'yaş belirtilmedi')+')\nKonu: '+$('cg').value+'\nTercih edilen gün: '+$('cd').value+($('nt').value.trim()?'\nNot: '+$('nt').value.trim():'');
+ if(WHATSAPP){ok.textContent='Bilgileriniz hazır. Göndermek için dokunun: ';var a=document.createElement('a');a.href='https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(txt);a.target='_blank';a.rel='noopener';a.className='btn';a.textContent='WhatsApp’ta gönder';ok.appendChild(a)}
+ else ok.textContent='Teşekkürler '+pn+'! Bu bir önizlemedir; yayındaki sitede talebiniz WhatsApp ile JoyKids’e iletilecek.';
+ ok.hidden=false});
+})();
+</script>
+</body></html>
